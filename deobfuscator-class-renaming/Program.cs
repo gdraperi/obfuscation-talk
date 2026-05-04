@@ -16,7 +16,20 @@ foreach (var type in module.Types)
     if (type.Name == "<Module>")
         continue;
 
-    // Rename types
+    var renamingDictionary = new Dictionary<int, string>()
+    {
+        {0x2000004, "Program"},
+    };
+    Console.WriteLine($"Processing type: {type.FullName} (MDToken: {type.MDToken.ToInt32():X8})");
+    if (renamingDictionary.TryGetValue(type.MDToken.ToInt32(), out var newName))
+    {
+        type.Name = newName;
+        continue;
+    }
+
+    // Rename types based on hierarchy.
+    if (type.BaseType.FullName == "System.Attribute")
+        type.Name = type.Name + "Attribute";
     if (type.BaseType.FullName == "Avalonia.Controls.Window")
         type.Name = type.Name + "Window";
     if (type.BaseType.FullName == "Avalonia.Application")
