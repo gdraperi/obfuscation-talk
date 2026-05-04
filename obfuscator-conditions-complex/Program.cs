@@ -77,6 +77,7 @@ class FlowGraph
         = new List<BasicBlock>();
     public FlowGraph(MethodDef method)
     {
+        // Finding start of basic blocks using linear scan. Check br/ret/jump targets
         List<int> basicBlocksStart = new() { 0 };
         for (int i = 1; i < method.Body.Instructions.Count; i++)
         {
