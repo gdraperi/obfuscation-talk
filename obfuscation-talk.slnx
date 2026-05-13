@@ -2,6 +2,9 @@
   <Folder Name="/deobfuscators/">
     <Project Path="deobfuscator-class-renaming/deobfuscator-class-renaming.csproj" Id="4c0689f1-c148-4ed0-aeb8-da060a4f2c59" />
   </Folder>
+  <Folder Name="/generator/">
+    <Project Path="generator-simple-expression/generator-simple-expression.fsproj" Id="6837c9c1-4904-4ad8-94cb-3849ecaa86fe" />
+  </Folder>
   <Folder Name="/obfuscators/">
     <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
     <Project Path="obfuscator-conditions-complex/obfuscator-conditions-complex.csproj" Id="bf223f5d-64af-4690-81ce-aa6ad0a69e80" />
