@@ -3,6 +3,7 @@
     <Project Path="deobfuscator-class-renaming/deobfuscator-class-renaming.csproj" Id="4c0689f1-c148-4ed0-aeb8-da060a4f2c59" />
   </Folder>
   <Folder Name="/generator/">
+    <Project Path="generator-simple-expression-csharp/generator-simple-expression-csharp.csproj" Id="150da6a7-0f11-42b0-acc2-15d6702379f0" />
     <Project Path="generator-simple-expression/generator-simple-expression.fsproj" Id="6837c9c1-4904-4ad8-94cb-3849ecaa86fe" />
   </Folder>
   <Folder Name="/obfuscators/">
