@@ -60,6 +60,7 @@ dotnet run --project obfuscator-string-encryption\obfuscator-string-encryption.c
 dotnet run --project obfuscator-conditions-simple\obfuscator-conditions-simple.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated.dll
 dotnet run --project obfuscator-dead-code\obfuscator-dead-code.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated-dead.dll
 dotnet run --project obfuscator-conditions-complex\obfuscator-conditions-complex.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated-complex.dll
+dotnet run --project obfuscator-generate-conditions\obfuscator-generate-conditions.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated-generate.dll
 ```
 
 Run deobfuscators

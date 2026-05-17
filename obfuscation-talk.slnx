@@ -11,6 +11,7 @@
     <Project Path="obfuscator-conditions-complex/obfuscator-conditions-complex.csproj" Id="bf223f5d-64af-4690-81ce-aa6ad0a69e80" />
     <Project Path="obfuscator-conditions-simple/obfuscator-conditions-simple.csproj" Id="5630faf3-987d-45a5-900e-038bc72d9c9c" />
     <Project Path="obfuscator-dead-code/obfuscator-dead-code.csproj" Id="63f4ddd4-0f01-48d4-a876-2fd7b2932f55" />
+    <Project Path="obfuscator-generate-conditions/obfuscator-generate-conditions.csproj" Id="a12edb2d-a2f7-4be0-8748-b8f25b47d9e6" />
     <Project Path="obfuscator-properties-removal/obfuscator-properties-removal.csproj" />
     <Project Path="obfuscator-string-encoding/obfuscator-string-encoding.csproj" Id="f9f7609d-a05d-4713-8508-778f047d7550" />
     <Project Path="obfuscator-string-encryption/obfuscator-string-encryption.csproj" Id="2e24803f-7158-40df-a391-a67d2400037b" />
