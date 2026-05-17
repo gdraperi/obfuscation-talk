@@ -2,7 +2,7 @@
 
 var (expr, value) = Generator(3);
 var body = new CilBody();
-GenerateMethodBody(expr, body);
+GenerateMethodBody(expr, body.Instructions);
 
 Console.WriteLine("Expression");
 Console.WriteLine("{0}", expr);
@@ -22,7 +22,7 @@ for (var i = 0; i < body.Instructions.Count; i++)
         var value = Random.Shared.Next(100);
         return (new ConstInt32(value), value);
     }
-    var op = Random.Shared.Next(6);
+    var op = Random.Shared.Next(5);
     var (left, leftValue) = Generator(fuel - 1);
     var (right, rightValue) = Generator(fuel - 1);
     switch (op)
@@ -45,37 +45,37 @@ for (var i = 0; i < body.Instructions.Count; i++)
     return (new AddOperation(left, right), rightValue);
 }
 
-void GenerateMethodBody(Expr expr, CilBody il)
+void GenerateMethodBody(Expr expr, IList<Instruction> il)
 {
     switch (expr)
     {
         case ConstInt32 c:
-            il.Instructions.Add(Instruction.Create(OpCodes.Ldc_I4, c.Value));
+            il.Add(Instruction.Create(OpCodes.Ldc_I4, c.Value));
             break;
         case AddOperation a:
             GenerateMethodBody(a.Left, il);
             GenerateMethodBody(a.Right, il);
-            il.Instructions.Add(Instruction.Create(OpCodes.Add));
+            il.Add(Instruction.Create(OpCodes.Add));
             break;
         case SubOperation s:
             GenerateMethodBody(s.Left, il);
             GenerateMethodBody(s.Right, il);
-            il.Instructions.Add(Instruction.Create(OpCodes.Sub));
+            il.Add(Instruction.Create(OpCodes.Sub));
             break;
         case MulOperation m:
             GenerateMethodBody(m.Left, il);
             GenerateMethodBody(m.Right, il);
-            il.Instructions.Add(Instruction.Create(OpCodes.Mul));
+            il.Add(Instruction.Create(OpCodes.Mul));
             break;
         case DivOperation d:
             GenerateMethodBody(d.Left, il);
             GenerateMethodBody(d.Right, il);
-            il.Instructions.Add(Instruction.Create(OpCodes.Div));
+            il.Add(Instruction.Create(OpCodes.Div));
             break;
         case ModOperation m:
             GenerateMethodBody(m.Left, il);
             GenerateMethodBody(m.Right, il);
-            il.Instructions.Add(Instruction.Create(OpCodes.Rem));
+            il.Add(Instruction.Create(OpCodes.Rem));
             break;
     }
 }
