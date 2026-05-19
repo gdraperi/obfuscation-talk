@@ -2,6 +2,7 @@
   <Folder Name="/deobfuscators/">
     <Project Path="deobfuscator-class-renaming-fsharp/deobfuscator-class-renaming-fsharp.fsproj" Id="6fe84994-73a4-43f0-8f99-7b455d4e2280" />
     <Project Path="deobfuscator-class-renaming/deobfuscator-class-renaming.csproj" Id="4c0689f1-c148-4ed0-aeb8-da060a4f2c59" />
+    <Project Path="deobfuscator-expression-recovery-fsharp/deobfuscator-expression-recovery-fsharp.fsproj" Id="3f9bfe28-026e-484c-bb06-9803675d29d5" />
   </Folder>
   <Folder Name="/generator/">
     <Project Path="generator-simple-expression-csharp/generator-simple-expression-csharp.csproj" Id="150da6a7-0f11-42b0-acc2-15d6702379f0" />

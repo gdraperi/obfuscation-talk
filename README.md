@@ -68,6 +68,8 @@ Run deobfuscators
 ```shell
 dotnet run --project obfuscator-class-renaming\obfuscator-class-renaming.csproj artifacts\bin\hello-desktop\release\hello-desktop.dll artifacts\bin\hello-desktop\release\hello-desktop.obfuscated.dll
 dotnet run --project deobfuscator-class-renaming\deobfuscator-class-renaming.csproj artifacts\bin\hello-desktop\release\hello-desktop.obfuscated.dll artifacts\bin\hello-desktop\release\hello-desktop.deobfuscated.dll	
+dotnet run --project deobfuscator-class-renaming-fsharp\deobfuscator-class-renaming-fsharp.fsproj artifacts\bin\hello-desktop\release\hello-desktop.obfuscated.dll artifacts\bin\hello-desktop\release\hello-desktop.deobfuscated.fs.dll
+dotnet run --project deobfuscator-expression-recovery-fsharp\deobfuscator-expression-recovery-fsharp.fsproj artifacts\bin\hello-conditions\release\hello-conditions.obfuscated-generate.dll artifacts\bin\hello-conditions\release\hello-conditions.deobfuscated-generate.dll
 ```
 
 ## .NET Cheat Sheet
