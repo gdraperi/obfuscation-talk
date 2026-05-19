@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/deobfuscators/">
+    <Project Path="deobfuscator-class-renaming-fsharp/deobfuscator-class-renaming-fsharp.fsproj" Id="6fe84994-73a4-43f0-8f99-7b455d4e2280" />
     <Project Path="deobfuscator-class-renaming/deobfuscator-class-renaming.csproj" Id="4c0689f1-c148-4ed0-aeb8-da060a4f2c59" />
   </Folder>
   <Folder Name="/generator/">
